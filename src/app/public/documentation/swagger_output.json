@@ -1,0 +1,120 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "API Contele",
+    "description": "Documentação da API Contele, criada com o intuito de explicar os endpoints gerados para o teste de Dev Junior."
+  },
+  "host": "localhost:3000",
+  "basePath": "/api/v1/",
+  "tags": [
+    {
+      "name": "Usuários",
+      "description": "Endpoints para gestão de usuários."
+    }
+  ],
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/users": {
+      "get": {
+        "tags": [],
+        "description": "",
+        "parameters": [],
+        "responses": {}
+      },
+      "post": {
+        "tags": [],
+        "description": "",
+        "parameters": [],
+        "responses": {}
+      },
+      "delete": {
+        "tags": [],
+        "description": "",
+        "parameters": [],
+        "responses": {}
+      }
+    },
+    "/users/{id_user}": {
+      "get": {
+        "tags": [],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id_user",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {}
+      },
+      "put": {
+        "tags": [],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id_user",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {}
+      },
+      "delete": {
+        "tags": [],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id_user",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {}
+      }
+    }
+  },
+  "definitions": {
+    "Usuario": {
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string",
+          "example": "lucas@gmail.com"
+        },
+        "password": {
+          "type": "string",
+          "example": "123"
+        }
+      }
+    },
+    "AddUsuario": {
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string",
+          "example": "lucas@gmail.com"
+        },
+        "password": {
+          "type": "string",
+          "example": "123"
+        }
+      },
+      "required": [
+        "email",
+        "password"
+      ]
+    }
+  }
+}
